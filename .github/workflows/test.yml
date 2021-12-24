@@ -18,5 +18,10 @@ jobs:
         with:
           version: '1.6'
       
-      - name: Install Julia language server
-        run: julia -e 'using Pkg; Pkg.add(Pkg.PackageSpec(;name="LanguageServer", version="${{ env.JULIA_LANGSERVER }}"))'
+      - run: julia --version
+      
+      - run: julia --compile=min -O0 -e using InteractiveUtils; versioninfo()
+        
+      - run: which julia
+      
+      - run: echo "$PATH"
