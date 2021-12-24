@@ -23,7 +23,7 @@ jobs:
         env:
           SETUP_JULIA_PATH: ${{ steps.setup-julia.outputs.julia-bindir }}
         run: |
-          echo "export PATH=\"$SETUP_JULIA_PATH:\$PATH\""
+          echo "export PATH=\"$SETUP_JULIA_PATH:\$PATH\"" >> "$HOME/.bashrc"
       
       - run: julia --version
       
