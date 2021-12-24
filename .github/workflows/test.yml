@@ -20,7 +20,7 @@ jobs:
       
       - run: julia --version
       
-      - run: julia --compile=min -O0 -e using InteractiveUtils; versioninfo()
+      - run: julia --compile=min -O0 -e "using InteractiveUtils; versioninfo()"
         
       - run: which julia
       
