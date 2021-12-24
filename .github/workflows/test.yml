@@ -4,7 +4,7 @@ on:
 
 defaults:
   run:
-    shell: bash -l {0}
+    shell: bash {0}
 
 env:
   JULIA_LANGSERVER: 3.2.0
