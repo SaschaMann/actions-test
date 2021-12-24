@@ -30,4 +30,6 @@ jobs:
       
       - run: echo "$PATH"
       
-      - run: cat ~/.bash_profile
+      - run: |
+          cat ~/.bash_profile
+          cat ~/.bashrc
