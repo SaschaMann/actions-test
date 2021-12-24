@@ -4,7 +4,7 @@ on:
 
 defaults:
   run:
-    shell: bash {0}
+    shell: bash -l {0}
 
 env:
   JULIA_LANGSERVER: 3.2.0
@@ -23,5 +23,9 @@ jobs:
       - run: julia --compile=min -O0 -e "using InteractiveUtils; versioninfo()"
         
       - run: which julia
+      
+      - run: echo "$PATH"
+      
+      - run: echo "/Users/runner/hostedtoolcache/julia/1.6.5/x64/bin" >> $GITHUB_PATH
       
       - run: echo "$PATH"
