@@ -29,3 +29,5 @@ jobs:
       - run: echo "/Users/runner/hostedtoolcache/julia/1.6.5/x64/bin" >> $GITHUB_PATH
       
       - run: echo "$PATH"
+      
+      - run: cat ~/.bash_profile
